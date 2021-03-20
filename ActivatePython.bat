@@ -1,0 +1,1 @@
+cmd.exe /K C:\Users\maniv\anaconda3\Scripts\activate.bat C:\Users\maniv\anaconda3\envs\CSE531OS
