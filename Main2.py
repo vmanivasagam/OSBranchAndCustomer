@@ -40,14 +40,6 @@ if __name__=="__main__":
     lastPortNumberPlusOne=identifyLastPortPlusOne(ip, branchport)
 
 
-    '''for obj in ip:
-        if("branch"==obj["type"]):
-            p1=subprocess.Popen('python Branch.py ' + str(branchport)+" "+ str(obj["id"])+" \""+ str(obj["balance"]) + "\" "+ str(lastPortNumber))
-            print("Main.py - Branch process started at port" + str(branchport))
-            #print(p1)
-            branchport=branchport+1
-    '''
-
     # Loop through the objects in the input file creating branches first    
     # bnch will contain the list of all branch processes created by the multiprocessing.Process fn.
     bnch=[]
@@ -71,15 +63,3 @@ if __name__=="__main__":
             print("Main.py - Customer process started at port" + str(customerport))
             customerport=customerport+1
 
-
-
-
-
-'''def startBranch1(num):
-    print("startBranchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-    os.system('python Branch.py "50051" "1" "400" "50054"')# + str(branchport)+" "+ str(obj["id"])+" \""+ str(obj["balance"]) + "\" "+ str(lastPortNumber))
-def startBranch2(num):
-    os.system('python Branch.py "50052" "2" "400" "50054"')
-def startBranch3(num):
-    os.system('python Branch.py "50053" "3" "400" "50054"')
-'''

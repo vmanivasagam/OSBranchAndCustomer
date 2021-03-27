@@ -61,11 +61,11 @@ if __name__ == '__main__':
 
 
     # Print statements for denoting start of Customer process
-    printableCustomer="Customer@"+str(thisport)
-    print(printableCustomer, " - Main: ", "Customer process started at port: ", str(thisport), "with ID: ", str(customerid), " and events: ", customerevents)
+    printableCustomer="Customer@"+thisport
+    print(printableCustomer, " - Main: ", "Customer process started at port: ", thisport, "with ID: ", customerid, " and events: ", customerevents)
     
     # Start the customer process
-    c=Customer(str(customerid), str(customerevents))
+    c=Customer(customerid, customerevents)
 
     # Execute the events associated with the customer
     op=c.executeEvents()
@@ -73,4 +73,3 @@ if __name__ == '__main__':
     # Open the output file for append and add the output string
     f=open("Output.txt", "a")
     f.write(op)
-    #print("Finished Global")
